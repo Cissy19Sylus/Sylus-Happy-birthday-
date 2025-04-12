@@ -7,7 +7,7 @@ import random
 # 设置页面配置
 st.set_page_config(
     page_title="秦彻生日快乐",
-    page_icon="🔥",
+    page_icon="🎉",
     layout="wide"
 )
 
@@ -16,8 +16,8 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #1E1E1E;
-        color: #FFFFFF;
+        background-color: #FFF5E6;
+        color: #333333;
         font-family: 'Arial', sans-serif;
     }
     .title {
@@ -27,25 +27,29 @@ st.markdown(
         margin-bottom: 20px;
     }
     .subtitle {
-        color: #FF4500;
+        color: #FF6347;
         text-align: center;
         font-size: 24px;
         margin-bottom: 40px;
     }
+    .birthday-cake {
+        text-align: center;
+        margin: 40px 0;
+    }
     .message-card {
-        background-color: #2E2E2E;
+        background-color: #FFFFFF;
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-left: 4px solid #FF0000;
     }
     .quote-card {
-        background-color: #2E2E2E;
+        background-color: #FFFFFF;
         border-radius: 10px;
         padding: 15px;
         margin: 10px 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-left: 4px solid #FF0000;
     }
     .photo-gallery {
@@ -61,22 +65,18 @@ st.markdown(
         object-fit: cover;
         border-radius: 10px;
         transition: transform 0.3s;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .photo:hover {
         transform: scale(1.05);
-    }
-    .birthday-cake {
-        text-align: center;
-        margin: 40px 0;
     }
     .surprise {
         text-align: center;
         margin: 40px 0;
         padding: 20px;
-        background-color: #2E2E2E;
+        background-color: #FFFFFF;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .crow {
         width: 100px;
@@ -90,8 +90,18 @@ st.markdown(
 )
 
 # 页面标题
-st.markdown('<h1 class="title">🔥 秦彻生日快乐！🔥</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="title">🎉 秦彻生日快乐！ 🎉</h1>', unsafe_allow_html=True)
 st.markdown('<h2 class="subtitle">愿你岁岁平安，万事胜意！</h2>', unsafe_allow_html=True)
+
+# 生日蛋糕动画
+st.markdown(
+    """
+    <div class="birthday-cake">
+        <img src="https://cdn-icons-png.flaticon.com/512/2423/2423241.png" width="300">
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # 秦彻语录
 st.markdown('<h3>✨ 秦彻语录 ✨</h3>', unsafe_allow_html=True)
@@ -199,7 +209,7 @@ st.markdown(
 st.markdown('<h3>🎉 特别惊喜 🎉</h3>', unsafe_allow_html=True)
 st.markdown("点击下方按钮，给秦彻一个特别的惊喜！")
 
-if st.button("🔥 点击这里给秦彻一个惊喜 🔥"):
+if st.button("🎉 点击这里给秦彻一个惊喜 🎉"):
     st.balloons()
     st.markdown(
         """
@@ -214,9 +224,9 @@ if st.button("🔥 点击这里给秦彻一个惊喜 🔥"):
 # 页脚
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 50px; color: #FF4500;">
+    <div style="text-align: center; margin-top: 50px; color: #FF6347;">
         <p>祝秦彻生日快乐！愿你新的一岁平安喜乐，万事胜意！</p>
-        <p>🔥 生日快乐，永远18岁！🔥</p>
+        <p>🎉 生日快乐，永远18岁！🎉</p>
     </div>
     """,
     unsafe_allow_html=True
