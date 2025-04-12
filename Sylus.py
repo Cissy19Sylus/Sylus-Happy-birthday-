@@ -240,22 +240,21 @@ if st.button("提交心情"):
     
     st.success("姓薛的已经告诉我了，玩得开心就好")
 
-if os.path.exists("moods.json"):
-    with open("moods.json", "r") as f:
-        moods_data = json.load(f)
-    
-    if moods_data:
-        st.markdown('<h4>大家的心情：</h4>', unsafe_allow_html=True)
-        for mood in reversed(moods_data):
-            st.markdown(
-                f"""
-                <div class="message-card">
-                    <p>{mood['mood']} - {mood['time'].split()[1]}</p>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-
+with st.expander("查看大家的心情"):
+    if os.path.exists("moods.json"):
+        with open("moods.json", "r") as f:
+            moods_data = json.load(f)
+        
+        if moods_data:
+            for mood in reversed(moods_data):
+                st.markdown(
+                    f"""
+                    <div class="message-card">
+                        <p>{mood['mood']} - {mood['time'].split()[1]}</p>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
 # 特别惊喜
 st.markdown('<h3>🎉 特别惊喜 🎉</h3>', unsafe_allow_html=True)
 st.markdown("点击下方按钮，给秦彻一个特别的惊喜！")
