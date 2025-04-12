@@ -95,17 +95,13 @@ st.markdown('<h1 class="title">🎉 秦彻生日快乐！ 🎉</h1>', unsafe_all
 st.markdown('<h2 class="subtitle">愿你岁岁平安，万事胜意！</h2>', unsafe_allow_html=True)
 
 # 视频展示区
-st.markdown('<h3>🎬 秦彻视频 🎬</h3>', unsafe_allow_html=True)
-st.markdown("在这里观看与秦彻相关的视频吧！")
+st.markdown('<h3>🎬 生日PV 🎬</h3>', unsafe_allow_html=True)
 
-# 添加一个视频（示例使用一个公开的视频链接）
-video_url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"  # 示例视频链接，请替换为实际的秦彻相关视频
-st.video(video_url)
 
 # 留言区
 st.markdown('<h3>📝 留言区 📝</h3>', unsafe_allow_html=True)
 st.markdown("在这里留下你对秦彻的生日祝福吧！")
-st.markdown("**提示：只有公开留言才能留存下来，且公开留言不可删除。**")
+st.markdown("**提示：只有公开留言才能留存下来，且公开留言不可删除（我就是想试一下结果删不掉了）**")
 
 with st.form(key="birthday_wish"):
     name = st.text_input("你的名字：")
@@ -156,56 +152,12 @@ if os.path.exists("wishes.json"):
                     unsafe_allow_html=True
                 )
 
-# 生日愿望瓶
-st.markdown('<h3>✨ 生日愿望瓶 ✨</h3>', unsafe_allow_html=True)
-st.markdown("写下你的生日愿望，放入瓶子中，让秦彻看到吧！")
-
-with st.form(key="birthday_wish_bottle"):
-    wish_bottle = st.text_area("写下你的愿望：", height=100)
-    submit_bottle = st.form_submit_button(label="放入瓶子")
-
-if submit_bottle:
-    if not os.path.exists("wish_bottles.json"):
-        with open("wish_bottles.json", "w") as f:
-            json.dump([], f)
-    
-    with open("wish_bottles.json", "r") as f:
-        wish_bottles = json.load(f)
-    
-    new_wish_bottle = {
-        "wish": wish_bottle,
-        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    }
-    
-    wish_bottles.append(new_wish_bottle)
-    
-    with open("wish_bottles.json", "w") as f:
-        json.dump(wish_bottles, f)
-    
-    st.success("愿望已放入瓶子！")
-
-if os.path.exists("wish_bottles.json"):
-    with open("wish_bottles.json", "r") as f:
-        wish_bottles = json.load(f)
-    
-    if wish_bottles:
-        st.markdown('<h4>来自瓶子的愿望：</h4>', unsafe_allow_html=True)
-        for bottle in reversed(wish_bottles):
-            st.markdown(
-                f"""
-                <div class="message-card">
-                    <p>在 {bottle['time'].split()[1]} 的愿望：</p>
-                    <p>{bottle['wish']}</p>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
 
 # 幸运抽奖
 st.markdown('<h3>🎮 幸运抽奖 🎮</h3>', unsafe_allow_html=True)
-st.markdown("参与抽奖，赢取秦彻的特别礼物！")
+st.markdown("参与抽奖，赢取特别礼物！")
 
-prizes = ["秦彻签名照", "虚拟礼物", "特别祝福", "幸运抽奖券"]
+prizes = ["彻狸亲亲烧", "秦彻爽", "十连十金符", "幸运抽奖券"]
 if st.button("参与抽奖"):
     prize = random.choice(prizes)
     st.balloons()
@@ -224,7 +176,7 @@ st.markdown('<h3>⏳ 生日倒计时 ⏳</h3>', unsafe_allow_html=True)
 st.markdown("距离秦彻的生日还有多少天？")
 
 # 设置秦彻的生日日期（示例：2024年12月25日）
-birthday = datetime(2024, 12, 25)
+birthday = datetime(2024, 4, 18)
 
 # 计算距离生日还有多少天
 days_left = (birthday - datetime.now()).days
