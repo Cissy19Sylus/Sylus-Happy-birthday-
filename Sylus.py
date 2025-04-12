@@ -250,8 +250,9 @@ if os.path.exists("moods.json"):
 st.markdown('<h3>🎉 特别惊喜 🎉</h3>', unsafe_allow_html=True)
 st.markdown("点击下方按钮，给秦彻一个特别的惊喜！")
 
-if st.button("🎉 点击这里给秦彻一个惊喜 🎉"):
+if st.button("🎉 求你了点一下吧 🎉"):
     st.balloons()
+
     st.markdown(
         """
         <div class="surprise">
@@ -267,7 +268,8 @@ st.markdown(
     """
     <div style="text-align: center; margin-top: 50px; color: #FF6347;">
         <p>祝秦彻生日快乐！且喜且乐！</p>
-        <p>🎉 生日快乐 🎉</p>
+        <p>🎉 生日快乐 祝各位小狸花玩的开心 🎉</p>
+        <p> 以上内容全部为“硒硒果冻”一人制作啦，学术不精，只能做成这样啦，大家见谅 </p>
     </div>
     """,
     unsafe_allow_html=True
