@@ -2,6 +2,7 @@ import streamlit as st
 import json
 import os
 from datetime import datetime
+import random
 
 # 设置页面配置
 st.set_page_config(
