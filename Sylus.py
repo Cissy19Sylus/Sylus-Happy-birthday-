@@ -165,7 +165,9 @@ if os.path.exists("wishes.json"):
     if wishes:
         st.markdown('<h4>来自大家的祝福：</h4>', unsafe_allow_html=True)
         for wish in reversed(wishes):
-            if wish["is_public"]:
+            # 检查是否包含is_public键，如果没有，默认为True
+            is_public = wish.get("is_public", True)
+            if is_public:
                 st.markdown(
                     f"""
                     <div class="message-card">
