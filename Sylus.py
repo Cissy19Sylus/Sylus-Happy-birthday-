@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon="🎉",
     layout="wide"
 )
-
+st.markdown("开深色模式有些字体会看不到喏")
 # 自定义CSS样式
 st.markdown(
     """
