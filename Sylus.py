@@ -266,9 +266,9 @@ if st.button("🎉 求你了点一下吧 🎉"):
 # 页脚
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 50px; color: #FF6347;">
-        <p>祝秦彻生日快乐！且喜且乐！</p>
-        <p>🎉 生日快乐 祝各位小狸花玩的开心 🎉</p>
+    <div style="text-align: center; margin-top: 50px;">
+        <p>🎉 祝秦彻生日快乐！且喜且乐！ 🎉</p>
+        <p>生日快乐 祝各位小狸花玩的开心</p>
         <p> 以上内容全部为“硒硒果冻”一人制作啦，学术不精，只能做成这样啦，大家见谅 </p>
     </div>
     """,
