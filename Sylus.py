@@ -126,12 +126,14 @@ st.markdown(
 )
 
 # 视频展示区
+# 视频展示区
 st.markdown('<h3>🎬 生日PV 🎬</h3>', unsafe_allow_html=True)
 
-# 嵌入HTML代码以实现自动播放
+
+# 嵌入HTML代码以实现自动播放和循环播放
 st.markdown(
     """
-    <video width="800" height="600" autoplay controls>
+    <video width="800" height="600" autoplay loop controls>
         <source src="秦彻PV.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -139,7 +141,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title('清晰度致歉，Github只能上传25MB的文件')
+st.markdown('清晰度致歉，Github只能上传25MB的文件')
 
 # 留言区
 st.markdown('<h3>📝 留言区 📝</h3>', unsafe_allow_html=True)
