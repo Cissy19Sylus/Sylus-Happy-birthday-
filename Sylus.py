@@ -188,7 +188,7 @@ if os.path.exists("wishes.json"):
 st.markdown('<h3>🎮 幸运抽奖 🎮</h3>', unsafe_allow_html=True)
 st.markdown("参与抽奖，赢取特别礼物！")
 
-prizes = ["彻狸亲亲烧", "秦彻爽", "十连十金符", "幸运抽奖券"]
+prizes = ["彻狸亲亲烧", "秦彻爽", "十连十金符"]
 if st.button("参与抽奖"):
     prize = random.choice(prizes)
     st.balloons()
@@ -205,7 +205,7 @@ if st.button("参与抽奖"):
 
 # 心情选择
 st.markdown('<h3>😊 心情选择 😊</h3>', unsafe_allow_html=True)
-st.markdown("选择你的心情，表达对秦彻的祝福！")
+st.markdown("选择你的心情，之之收到会很开心！")
 
 moods = ["❤️", "😍", "🎉", "🥳", "🌟", "🌈", "✨"]
 selected_mood = st.selectbox("选择你的心情：", moods)
