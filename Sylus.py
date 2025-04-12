@@ -129,7 +129,7 @@ st.markdown(
 # 视频展示区
 st.markdown('<h3>🎬 生日PV 🎬</h3>', unsafe_allow_html=True)
 
-video_file = open('秦彻PV.mp4', 'rb')  # 确保这一行的缩进与前后代码一致
+video_file = open('秦彻PV.mp4', 'rb', 'autoplay = True' )  # 确保这一行的缩进与前后代码一致
 video_bytes = video_file.read()
 st.video(video_bytes)
 st.markdown('清晰度致歉，Github只能上传25MB的文件')
