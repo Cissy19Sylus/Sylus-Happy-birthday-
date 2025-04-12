@@ -161,7 +161,7 @@ if submit_button:
     with open("wishes.json", "w") as f:
         json.dump(wishes, f)
     
-    st.success("祝福已提交！")
+    st.success("秦彻已收到！")
 
 if os.path.exists("wishes.json"):
     with open("wishes.json", "r") as f:
@@ -228,7 +228,7 @@ if st.button("提交心情"):
     with open("moods.json", "w") as f:
         json.dump(moods_data, f)
     
-    st.success("心情已提交！")
+    st.success("姓薛的已经告诉我了，玩得开心就好")
 
 if os.path.exists("moods.json"):
     with open("moods.json", "r") as f:
@@ -256,7 +256,7 @@ if st.button("🎉 点击这里给秦彻一个惊喜 🎉"):
         """
         <div class="surprise">
             <h3>🎈 生日快乐，秦彻！🎈</h3>
-            <p>愿你的每一天都充满光和希望！</p>
+            <p>愿你，灵魂永不消散！</p>
         </div>
         """,
         unsafe_allow_html=True
@@ -266,8 +266,8 @@ if st.button("🎉 点击这里给秦彻一个惊喜 🎉"):
 st.markdown(
     """
     <div style="text-align: center; margin-top: 50px; color: #FF6347;">
-        <p>祝秦彻生日快乐！愿你新的一岁平安喜乐，万事胜意！</p>
-        <p>🎉 生日快乐，永远18岁！🎉</p>
+        <p>祝秦彻生日快乐！且喜且乐！</p>
+        <p>🎉 生日快乐 🎉</p>
     </div>
     """,
     unsafe_allow_html=True
