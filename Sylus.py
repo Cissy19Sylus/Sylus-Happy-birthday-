@@ -98,7 +98,7 @@ st.markdown('<h2 class="subtitle">愿你岁岁平安，万事胜意！</h2>', un
 st.markdown('<h3>⏳ 生日倒计时 ⏳</h3>', unsafe_allow_html=True)
 st.markdown("距离秦彻的生日还有多少天？")
 
-# 设置秦彻的生日日期（示例：2024年12月25日）
+# 设置秦彻的生日日期（示例：2025年4月12日）
 birthday = datetime(2025, 4, 12)
 
 # 计算距离生日还有多少天
