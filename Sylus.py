@@ -133,7 +133,7 @@ with open('秦彻PV.mp4', 'rb') as video_file:
     video_bytes = video_file.read()
 
 # 使用st.video并设置autoplay和muted
-st.video(video_bytes, autoplay=True, muted=True)
+st.video(video_bytes, autoplay=True, muted=False)
 
 st.markdown('清晰度致歉，Github只能上传25MB的文件')
 
