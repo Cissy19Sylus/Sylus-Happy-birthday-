@@ -98,12 +98,12 @@ st.markdown('<h2 class="subtitle">愿你岁岁平安，万事胜意！</h2>', un
 st.markdown('<h3>⏳ 生日倒计时 ⏳</h3>', unsafe_allow_html=True)
 st.markdown("距离秦彻的生日还有多少天？")
 
-# 设置秦彻的生日日期（示例：2024年4月18日）
+# 设置秦彻的生日日期（示例：2024年4月12日）
 birthday_month = 4
 birthday_day = 12
 
-# 获取当前日期
-now = datetime.now()
+# 获取当前日期（只取日期部分，忽略时间）
+now = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 
 # 计算今年的生日日期
 current_year = now.year
