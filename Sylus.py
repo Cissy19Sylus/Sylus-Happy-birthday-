@@ -132,6 +132,7 @@ st.markdown("在这里留下你对秦彻的生日祝福吧！")
 with st.form(key="birthday_wish"):
     name = st.text_input("你的名字：")
     wish = st.text_area("写下你的祝福：", height=100)
+    is_public = st.checkbox("是否公开留言", value=True)  # 默认公开
     submit_button = st.form_submit_button(label="提交祝福")
 
 # 保存和显示留言
@@ -146,7 +147,8 @@ if submit_button:
     new_wish = {
         "name": name,
         "wish": wish,
-        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "is_public": is_public
     }
     
     wishes.append(new_wish)
@@ -163,15 +165,16 @@ if os.path.exists("wishes.json"):
     if wishes:
         st.markdown('<h4>来自大家的祝福：</h4>', unsafe_allow_html=True)
         for wish in reversed(wishes):
-            st.markdown(
-                f"""
-                <div class="message-card">
-                    <strong>{wish['name']} 在 {wish['time'].split()[1]} 写道：</strong>
-                    <p>{wish['wish']}</p>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+            if wish["is_public"]:
+                st.markdown(
+                    f"""
+                    <div class="message-card">
+                        <strong>{wish['name']} 在 {wish['time'].split()[1]} 写道：</strong>
+                        <p>{wish['wish']}</p>
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
 
 # 秦彻乌鸦展示区
 st.markdown('<h3>🐦 秦彻的乌鸦 🖤</h3>', unsafe_allow_html=True)
