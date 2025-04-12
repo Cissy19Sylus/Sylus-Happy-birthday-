@@ -94,6 +94,25 @@ st.markdown(
 st.markdown('<h1 class="title">🎉 秦彻生日快乐！ 🎉</h1>', unsafe_allow_html=True)
 st.markdown('<h2 class="subtitle">愿你岁岁平安，万事胜意！</h2>', unsafe_allow_html=True)
 
+# 生日倒计时
+st.markdown('<h3>⏳ 生日倒计时 ⏳</h3>', unsafe_allow_html=True)
+st.markdown("距离秦彻的生日还有多少天？")
+
+# 设置秦彻的生日日期（示例：2024年12月25日）
+birthday = datetime(2024, 4, 18)
+
+# 计算距离生日还有多少天
+days_left = (birthday - datetime.now()).days
+
+st.markdown(
+    f"""
+    <div class="countdown">
+        <h3>距离秦彻的生日还有 {days_left} 天！</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # 视频展示区
 st.markdown('<h3>🎬 生日PV 🎬</h3>', unsafe_allow_html=True)
 
@@ -171,24 +190,6 @@ if st.button("参与抽奖"):
         unsafe_allow_html=True
     )
 
-# 生日倒计时
-st.markdown('<h3>⏳ 生日倒计时 ⏳</h3>', unsafe_allow_html=True)
-st.markdown("距离秦彻的生日还有多少天？")
-
-# 设置秦彻的生日日期（示例：2024年12月25日）
-birthday = datetime(2024, 4, 18)
-
-# 计算距离生日还有多少天
-days_left = (birthday - datetime.now()).days
-
-st.markdown(
-    f"""
-    <div class="countdown">
-        <h3>距离秦彻的生日还有 {days_left} 天！</h3>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 # 心情选择
 st.markdown('<h3>😊 心情选择 😊</h3>', unsafe_allow_html=True)
