@@ -94,7 +94,7 @@ st.markdown(
 st.markdown('<h1 class="title">🎉 秦彻生日快乐！ 🎉</h1>', unsafe_allow_html=True)
 st.markdown('<h2 class="subtitle">愿你岁岁平安，万事胜意！</h2>', unsafe_allow_html=True)
 
-st.markdown("开深色模式有些字体会看不到喏")
+st.markdown("开深色模式有些字会看不到喏")
 
 # 生日倒计时
 st.markdown('<h3>⏳ 生日倒计时 ⏳</h3>', unsafe_allow_html=True)
